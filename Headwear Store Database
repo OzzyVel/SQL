@@ -8,7 +8,7 @@ Clippers Beanie (10), $38, 2 sold
 LA Kings Snap back (10), $35, 1 sold
 **/
 
-CREATE TABLE sales (stock_id integer primary key, name TEXT, invoice INTEGER, prcie INTEGER, quantity_sold INTEGER);
+CREATE TABLE sales (stock_id integer primary key, name TEXT, invoice INTEGER, price INTEGER, quantity_sold INTEGER);
 
 INSERT INTO sales VALUES(1, "Angels Snap back", 10, 25, 5);
 INSERT INTO sales VALUES (2, "Dodgers Snap Back", 10, 23, 2);
@@ -17,8 +17,8 @@ INSERT INTO sales VALUES (4, "Clippers Beanie", 10, 38, 2);
 INSERT INTO sales VALUES (5, "LA Kings Snap Back", 10, 35, 1);
 
 
---Display the database
-SELECT * from sales;
+--Display the database ordered by price.
+SELECT * from sales ORDER BY price;
 
---Display the total number of sales
+--Display the total number of sales.
 SELECT SUM(quantity_sold) FROM sales
